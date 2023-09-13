@@ -1,0 +1,157 @@
+#root {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.result {
+  display: grid;
+  gap: 15px;
+  min-width: 200px;
+  align-items: center;
+  padding: 25px;
+  border-radius: 30px;
+  background: linear-gradient(189deg, rgb(140, 161, 255) 0%, #000fa3 100%);
+
+  &__label {
+    color: rgb(223, 221, 235);
+  }
+
+  &__allscore {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__score:first-of-type {
+    font-size: 5.5em;
+    font-weight: 700;
+  }
+
+  &__score:last-of-type {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: rgb(176, 171, 201);
+  }
+
+  &__downtext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__congrats {
+    font-size: 1.5em;
+    color: rgb(223, 221, 235);
+  }
+
+  &__longtext {
+    font-size: 0.8em;
+    color: rgb(176, 171, 201);
+  }
+}
+
+.summary {
+  gap: 15px;
+  align-items: center;
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(0, 15, 163);
+  }
+
+  &__text {
+    font-size: 0.8em;
+    color: rgb(176, 171, 201);
+  }
+}
+
+.summary {
+  padding: 25px;
+
+  &__title {
+    color: #2f2f48;
+    text-align: left;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    list-style: none;
+    text-align: left;
+  }
+
+  .item-0 {
+    color: #00a308;
+    background-color: rgb(231, 243, 228);
+  }
+
+  .item-1 {
+    color: #000fa3;
+    background-color: rgb(228, 228, 243);
+  }
+
+  .item-2 {
+    color: #a30077;
+    background-color: rgb(243, 228, 239);
+  }
+
+  .item-3 {
+    color: #b0bb4d;
+    background-color: rgb(202, 255, 207);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(241, 245, 234);
+    color: rgb(116, 54, 54);
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__item--score::after {
+    content: "/ 100";
+    font-weight: bold; /* Add any desired styles */
+    color: #8890a0; /* Add any desired color */
+    /* Add any other styles as needed */
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    color: white;
+    background-color: #3939e5;
+    border: none;
+    font-size: 1em;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: #000fa3;
+  }
+}
